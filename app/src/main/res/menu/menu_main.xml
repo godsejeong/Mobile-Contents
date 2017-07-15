@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.wark.stop_road_.MainActivity">
+    <item
+        android:id="@+id/skip_1"
+        android:orderInCategory="1"
+        android:title="미구현"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/time_set"
+        android:orderInCategory="0"
+        android:title="@string/action_settings"
+        app:showAsAction="never"/>
+    <item
+    android:id="@+id/skip"
+    android:orderInCategory="1"
+    android:title="미구현"
+    app:showAsAction="never"/>
+
+
+</menu>

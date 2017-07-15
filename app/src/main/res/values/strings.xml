@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Stop_Road</string>
+    <string name="action_settings">시간 설정</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+</resources>
