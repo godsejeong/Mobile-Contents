@@ -1,5 +1,6 @@
 package com.wark.stop_road_;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -8,12 +9,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.github.mikephil.charting.data.Entry;
+
+import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
      //private SectionsPagerAdapter mSectionsPagerAdapter;
      private TabLayout tabLayout;
     private ViewPager viewPager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         // Initializing the TabLayout
         tabLayout = (TabLayout) findViewById(R.id.TabLayout);
-        tabLayout.addTab(tabLayout.newTab().setText("활동"));
-        tabLayout.addTab(tabLayout.newTab().setText("내 정보"));
+        tabLayout.addTab(tabLayout.newTab().setText("내 기록"));
+        tabLayout.addTab(tabLayout.newTab().setText("순위"));
         tabLayout.addTab(tabLayout.newTab().setText("안전뉴스"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
@@ -58,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //chart ArrayList
+        ArrayList<Entry> entries = new ArrayList<>();
+        entries.add();
     }
 
 
@@ -74,14 +82,20 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.time_set) {
-            return true;
+        switch(id) {
+            case R.id.warning:
+                Intent intent = new Intent(MainActivity.this,Warning.class);
+                startActivity(intent);
+                return true;
+            case R.id.my_information:
+                Intent a = new Intent(MainActivity.this,Information.class);
+                startActivity(a);
+                return  true;
+            case R.id.time_set:
+                Intent b = new Intent(MainActivity.this,Time_Set.class);
+                startActivity(b);
+                return  true;
         }
 
         return super.onOptionsItemSelected(item);

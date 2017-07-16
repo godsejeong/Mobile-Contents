@@ -3,19 +3,19 @@
       xmlns:tools="http://schemas.android.com/tools"
       tools:context="com.wark.stop_road_.MainActivity">
     <item
-        android:id="@+id/skip_1"
-        android:orderInCategory="1"
-        android:title="미구현"
-        app:showAsAction="always"/>
+        android:id="@+id/warning"
+        android:orderInCategory="0"
+        android:title="경고 문자 설정"
+        app:showAsAction="never"/>
     <item
         android:id="@+id/time_set"
-        android:orderInCategory="0"
+        android:orderInCategory="1"
         android:title="@string/action_settings"
         app:showAsAction="never"/>
     <item
-    android:id="@+id/skip"
-    android:orderInCategory="1"
-    android:title="미구현"
+    android:id="@+id/my_information"
+    android:orderInCategory="2"
+    android:title="내 정보"
     app:showAsAction="never"/>
 
 
