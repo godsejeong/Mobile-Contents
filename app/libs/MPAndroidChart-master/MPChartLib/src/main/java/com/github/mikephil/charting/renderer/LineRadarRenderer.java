@@ -41,7 +41,7 @@ public abstract class LineRadarRenderer extends LineScatterCandleRadarRenderer {
             c.restoreToCount(save);
         } else {
             throw new RuntimeException("Fill-drawables not (yet) supported below API level 18, " +
-                    "this code was run on API level " + Utils.getSDKInt() + ".");
+                    "this code was run on API level " + Utils.getSDKInt() + "");
         }
     }
 

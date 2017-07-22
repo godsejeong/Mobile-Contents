@@ -19,12 +19,12 @@ android {
     }
 }
 
-repositories {
-    maven { url "https://jitpack.io" }
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
 }
-dependencies {
-    compile 'com.github.PhilJay:MPAndroidChart:v2.1.6'
-}
+
 
 
 dependencies {
@@ -34,6 +34,7 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
+    compile 'com.github.PhilJay:MPAndroidChart:v2.1.6'
     testCompile 'junit:junit:4.12'
     compile 'com.mikhaellopez:circularimageview:3.0.2'
 }
